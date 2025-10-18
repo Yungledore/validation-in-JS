@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation
+    </title>
+</head>
+<body>
+    <form name="myform" onsubmit="validateform()">
+        Name: <input type="text" name="fname">
+        age: <input type="number" min="18" id="id1">
+        <input type="submit" value="login">
+        <p id=""></p>
+    </form>
+    <script>
+        function validateform(){
+            var x = document.forms["myform"]["fname"].value
+            var y = document.forms["myform"]["id1"].value
+            if (x == ""){
+                alert("Name/Age cannot be empty")
+                return false
+            }
+            else
+            alert("Succesfully logged in")
+        }
+    </script>
+</body>
+</html>
